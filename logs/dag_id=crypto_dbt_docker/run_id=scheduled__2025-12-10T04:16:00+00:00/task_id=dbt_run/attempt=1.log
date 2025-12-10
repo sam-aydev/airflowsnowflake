@@ -1,0 +1,35 @@
+[2025-12-10T04:16:59.501+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T04:16:00+00:00 [queued]>
+[2025-12-10T04:16:59.508+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T04:16:00+00:00 [queued]>
+[2025-12-10T04:16:59.508+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-12-10T04:16:59.523+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): dbt_run> on 2025-12-10 04:16:00+00:00
+[2025-12-10T04:16:59.531+0000] {standard_task_runner.py:57} INFO - Started process 1026 to run task
+[2025-12-10T04:16:59.534+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_dbt_docker', 'dbt_run', 'scheduled__2025-12-10T04:16:00+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/dbt_pipeline.py', '--cfg-path', '/tmp/tmpcrcohr9j']
+[2025-12-10T04:16:59.537+0000] {standard_task_runner.py:85} INFO - Job 37: Subtask dbt_run
+[2025-12-10T04:16:59.561+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-10T04:16:59.605+0000] {task_command.py:415} INFO - Running <TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T04:16:00+00:00 [running]> on host 35423fd881ec
+[2025-12-10T04:16:59.707+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crypto_dbt_docker' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-12-10T04:16:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-10T04:16:00+00:00'
+[2025-12-10T04:16:59.708+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-10T04:16:59.709+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'dbt run --project-dir /opt/***/dbt_project --profiles-dir /opt/***/dbt_profiles']
+[2025-12-10T04:16:59.723+0000] {subprocess.py:86} INFO - Output:
+[2025-12-10T04:17:01.575+0000] {subprocess.py:93} INFO - [0m04:17:01  Running with dbt=1.8.7
+[2025-12-10T04:17:02.527+0000] {subprocess.py:93} INFO - [0m04:17:02  Registered adapter: snowflake=1.8.4
+[2025-12-10T04:17:02.781+0000] {subprocess.py:93} INFO - [0m04:17:02  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2025-12-10T04:17:02.781+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2025-12-10T04:17:02.781+0000] {subprocess.py:93} INFO - - models.crypto_transform.gold
+[2025-12-10T04:17:02.781+0000] {subprocess.py:93} INFO - - models.crypto_transform.silver
+[2025-12-10T04:17:02.931+0000] {subprocess.py:93} INFO - [0m04:17:02  Found 1 model, 1 source, 454 macros
+[2025-12-10T04:17:03.017+0000] {subprocess.py:93} INFO - [0m04:17:03
+[2025-12-10T04:17:06.043+0000] {subprocess.py:93} INFO - [0m04:17:06  Concurrency: 1 threads (target='dev')
+[2025-12-10T04:17:06.044+0000] {subprocess.py:93} INFO - [0m04:17:06
+[2025-12-10T04:17:06.054+0000] {subprocess.py:93} INFO - [0m04:17:06  1 of 1 START sql view model public.bronze_data ................................. [RUN]
+[2025-12-10T04:17:08.089+0000] {subprocess.py:93} INFO - [0m04:17:08  1 of 1 OK created sql view model public.bronze_data ............................ [[32mSUCCESS 1[0m in 2.03s]
+[2025-12-10T04:17:08.094+0000] {subprocess.py:93} INFO - [0m04:17:08
+[2025-12-10T04:17:08.094+0000] {subprocess.py:93} INFO - [0m04:17:08  Finished running 1 view model in 0 hours 0 minutes and 5.08 seconds (5.08s).
+[2025-12-10T04:17:08.134+0000] {subprocess.py:93} INFO - [0m04:17:08
+[2025-12-10T04:17:08.134+0000] {subprocess.py:93} INFO - [0m04:17:08  [32mCompleted successfully[0m
+[2025-12-10T04:17:08.135+0000] {subprocess.py:93} INFO - [0m04:17:08
+[2025-12-10T04:17:08.136+0000] {subprocess.py:93} INFO - [0m04:17:08  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2025-12-10T04:17:09.855+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-10T04:17:09.896+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=crypto_dbt_docker, task_id=dbt_run, execution_date=20251210T041600, start_date=20251210T041659, end_date=20251210T041709
+[2025-12-10T04:17:09.929+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-10T04:17:09.953+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

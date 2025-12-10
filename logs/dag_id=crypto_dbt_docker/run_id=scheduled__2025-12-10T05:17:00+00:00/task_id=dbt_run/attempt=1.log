@@ -1,0 +1,30 @@
+[2025-12-10T05:19:03.059+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T05:17:00+00:00 [queued]>
+[2025-12-10T05:19:03.081+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T05:17:00+00:00 [queued]>
+[2025-12-10T05:19:03.082+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-12-10T05:19:03.128+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): dbt_run> on 2025-12-10 05:17:00+00:00
+[2025-12-10T05:19:03.147+0000] {standard_task_runner.py:57} INFO - Started process 2635 to run task
+[2025-12-10T05:19:03.157+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_dbt_docker', 'dbt_run', 'scheduled__2025-12-10T05:17:00+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/dbt_pipeline.py', '--cfg-path', '/tmp/tmpono7od7e']
+[2025-12-10T05:19:03.184+0000] {standard_task_runner.py:85} INFO - Job 76: Subtask dbt_run
+[2025-12-10T05:19:03.304+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-10T05:19:03.514+0000] {task_command.py:415} INFO - Running <TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T05:17:00+00:00 [running]> on host 35423fd881ec
+[2025-12-10T05:19:03.831+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crypto_dbt_docker' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-12-10T05:17:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-10T05:17:00+00:00'
+[2025-12-10T05:19:03.834+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-10T05:19:03.836+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'dbt run --project-dir /opt/***/dbt_project --profiles-dir /opt/***/dbt_profiles']
+[2025-12-10T05:19:03.868+0000] {subprocess.py:86} INFO - Output:
+[2025-12-10T05:19:08.665+0000] {subprocess.py:93} INFO - [0m05:19:08  Running with dbt=1.8.7
+[2025-12-10T05:19:10.480+0000] {subprocess.py:93} INFO - [0m05:19:10  Registered adapter: snowflake=1.8.4
+[2025-12-10T05:19:11.531+0000] {subprocess.py:93} INFO - [0m05:19:11  Encountered an error:
+[2025-12-10T05:19:11.532+0000] {subprocess.py:93} INFO - Compilation Error in snapshot dim_symbol_snapshot (snapshots/dim_symbol_snapshot.sql)
+[2025-12-10T05:19:11.532+0000] {subprocess.py:93} INFO -   invalid syntax for function call expression
+[2025-12-10T05:19:11.532+0000] {subprocess.py:93} INFO -     line 4
+[2025-12-10T05:19:11.532+0000] {subprocess.py:93} INFO -       config(
+[2025-12-10T05:19:14.271+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-12-10T05:19:14.295+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-12-10T05:19:14.302+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=crypto_dbt_docker, task_id=dbt_run, execution_date=20251210T051700, start_date=20251210T051903, end_date=20251210T051914
+[2025-12-10T05:19:14.329+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 76 for task dbt_run (Bash command failed. The command returned a non-zero exit code 2.; 2635)
+[2025-12-10T05:19:14.351+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-12-10T05:19:14.398+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

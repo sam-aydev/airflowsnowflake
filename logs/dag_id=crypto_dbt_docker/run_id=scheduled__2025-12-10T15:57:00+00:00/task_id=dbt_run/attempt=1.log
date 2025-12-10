@@ -1,0 +1,47 @@
+[2025-12-10T15:58:00.909+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T15:57:00+00:00 [queued]>
+[2025-12-10T15:58:00.915+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T15:57:00+00:00 [queued]>
+[2025-12-10T15:58:00.915+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-12-10T15:58:00.930+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): dbt_run> on 2025-12-10 15:57:00+00:00
+[2025-12-10T15:58:00.937+0000] {standard_task_runner.py:57} INFO - Started process 299 to run task
+[2025-12-10T15:58:00.941+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_dbt_docker', 'dbt_run', 'scheduled__2025-12-10T15:57:00+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/dbt_pipeline.py', '--cfg-path', '/tmp/tmpb774uug4']
+[2025-12-10T15:58:00.943+0000] {standard_task_runner.py:85} INFO - Job 96: Subtask dbt_run
+[2025-12-10T15:58:00.967+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-10T15:58:01.007+0000] {task_command.py:415} INFO - Running <TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T15:57:00+00:00 [running]> on host 35423fd881ec
+[2025-12-10T15:58:01.115+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crypto_dbt_docker' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-12-10T15:57:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-10T15:57:00+00:00'
+[2025-12-10T15:58:01.117+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-10T15:58:01.118+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'dbt run --project-dir /opt/***/dbt_project --profiles-dir /opt/***/dbt_profiles']
+[2025-12-10T15:58:01.139+0000] {subprocess.py:86} INFO - Output:
+[2025-12-10T15:58:03.154+0000] {subprocess.py:93} INFO - [0m15:58:03  Running with dbt=1.8.7
+[2025-12-10T15:58:04.123+0000] {subprocess.py:93} INFO - [0m15:58:04  Registered adapter: snowflake=1.8.4
+[2025-12-10T15:58:04.648+0000] {subprocess.py:93} INFO - [0m15:58:04  Found 5 models, 1 snapshot, 1 seed, 1 source, 454 macros
+[2025-12-10T15:58:04.650+0000] {subprocess.py:93} INFO - [0m15:58:04
+[2025-12-10T15:58:11.201+0000] {subprocess.py:93} INFO - [0m15:58:11  Concurrency: 1 threads (target='dev')
+[2025-12-10T15:58:11.202+0000] {subprocess.py:93} INFO - [0m15:58:11
+[2025-12-10T15:58:11.219+0000] {subprocess.py:93} INFO - [0m15:58:11  1 of 5 START sql view model public.bronze_data ................................. [RUN]
+[2025-12-10T15:58:19.167+0000] {subprocess.py:93} INFO - [0m15:58:19  1 of 5 OK created sql view model public.bronze_data ............................ [[32mSUCCESS 1[0m in 7.94s]
+[2025-12-10T15:58:19.170+0000] {subprocess.py:93} INFO - [0m15:58:19  2 of 5 START sql table model public.dim_symbol ................................. [RUN]
+[2025-12-10T15:59:05.176+0000] {subprocess.py:93} INFO - [0m15:59:05  2 of 5 OK created sql table model public.dim_symbol ............................ [[32mSUCCESS 1[0m in 46.00s]
+[2025-12-10T15:59:05.179+0000] {subprocess.py:93} INFO - [0m15:59:05  3 of 5 START sql incremental model public.silver_transformations ............... [RUN]
+[2025-12-10T16:00:04.828+0000] {subprocess.py:93} INFO - [0m16:00:04  3 of 5 OK created sql incremental model public.silver_transformations .......... [[32mSUCCESS 0[0m in 59.65s]
+[2025-12-10T16:00:04.830+0000] {subprocess.py:93} INFO - [0m16:00:04  4 of 5 START sql incremental model public.fact_trades .......................... [RUN]
+[2025-12-10T16:05:23.966+0000] {subprocess.py:93} INFO - [0m16:05:23  4 of 5 ERROR creating sql incremental model public.fact_trades ................. [[31mERROR[0m in 319.13s]
+[2025-12-10T16:05:23.969+0000] {subprocess.py:93} INFO - [0m16:05:23  5 of 5 SKIP relation public.gold_consumption_view .............................. [[33mSKIP[0m]
+[2025-12-10T16:05:23.973+0000] {subprocess.py:93} INFO - [0m16:05:23
+[2025-12-10T16:05:23.974+0000] {subprocess.py:93} INFO - [0m16:05:23  Finished running 2 view models, 1 table model, 2 incremental models in 0 hours 7 minutes and 19.32 seconds (439.32s).
+[2025-12-10T16:05:24.012+0000] {subprocess.py:93} INFO - [0m16:05:24
+[2025-12-10T16:05:24.012+0000] {subprocess.py:93} INFO - [0m16:05:24  [31mCompleted with 1 error and 0 warnings:[0m
+[2025-12-10T16:05:24.013+0000] {subprocess.py:93} INFO - [0m16:05:24
+[2025-12-10T16:05:24.013+0000] {subprocess.py:93} INFO - [0m16:05:24    Runtime Error in model fact_trades (models/gold/fact_trades.sql)
+[2025-12-10T16:05:24.013+0000] {subprocess.py:93} INFO -   250003: Failed to get the response. Hanging? method: post, url: https://DMJRCZZ-JX62496.snowflakecomputing.com:443/queries/v1/query-request?requestId=04bc5bc1-0ae2-43c0-a5ba-6ebfa43087f0&clientStartTime=1765382479364&retryCount=1&retryReason=None&request_guid=90790404-b958-405a-a068-3ec1414ee91a
+[2025-12-10T16:05:24.014+0000] {subprocess.py:93} INFO - [0m16:05:24
+[2025-12-10T16:05:24.014+0000] {subprocess.py:93} INFO - [0m16:05:24  Done. PASS=3 WARN=0 ERROR=1 SKIP=1 TOTAL=5
+[2025-12-10T16:05:33.433+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-12-10T16:05:33.449+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-12-10T16:05:33.452+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=crypto_dbt_docker, task_id=dbt_run, execution_date=20251210T155700, start_date=20251210T155800, end_date=20251210T160533
+[2025-12-10T16:05:33.468+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 96 for task dbt_run (Bash command failed. The command returned a non-zero exit code 1.; 299)
+[2025-12-10T16:05:33.495+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-12-10T16:05:33.520+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

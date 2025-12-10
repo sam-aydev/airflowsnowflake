@@ -1,0 +1,26 @@
+[2025-12-10T04:17:10.617+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_dbt_docker.dbt_test scheduled__2025-12-10T04:16:00+00:00 [queued]>
+[2025-12-10T04:17:10.624+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_dbt_docker.dbt_test scheduled__2025-12-10T04:16:00+00:00 [queued]>
+[2025-12-10T04:17:10.624+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-12-10T04:17:10.639+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): dbt_test> on 2025-12-10 04:16:00+00:00
+[2025-12-10T04:17:10.646+0000] {standard_task_runner.py:57} INFO - Started process 1052 to run task
+[2025-12-10T04:17:10.650+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_dbt_docker', 'dbt_test', 'scheduled__2025-12-10T04:16:00+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/dbt_pipeline.py', '--cfg-path', '/tmp/tmpvwsywb25']
+[2025-12-10T04:17:10.653+0000] {standard_task_runner.py:85} INFO - Job 38: Subtask dbt_test
+[2025-12-10T04:17:10.676+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-10T04:17:10.719+0000] {task_command.py:415} INFO - Running <TaskInstance: crypto_dbt_docker.dbt_test scheduled__2025-12-10T04:16:00+00:00 [running]> on host 35423fd881ec
+[2025-12-10T04:17:10.816+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crypto_dbt_docker' AIRFLOW_CTX_TASK_ID='dbt_test' AIRFLOW_CTX_EXECUTION_DATE='2025-12-10T04:16:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-10T04:16:00+00:00'
+[2025-12-10T04:17:10.818+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-10T04:17:10.819+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'dbt test --project-dir /opt/***/dbt_project --profiles-dir /opt/***/dbt_profiles']
+[2025-12-10T04:17:10.832+0000] {subprocess.py:86} INFO - Output:
+[2025-12-10T04:17:12.723+0000] {subprocess.py:93} INFO - [0m04:17:12  Running with dbt=1.8.7
+[2025-12-10T04:17:13.838+0000] {subprocess.py:93} INFO - [0m04:17:13  Registered adapter: snowflake=1.8.4
+[2025-12-10T04:17:14.018+0000] {subprocess.py:93} INFO - [0m04:17:14  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2025-12-10T04:17:14.018+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2025-12-10T04:17:14.018+0000] {subprocess.py:93} INFO - - models.crypto_transform.silver
+[2025-12-10T04:17:14.018+0000] {subprocess.py:93} INFO - - models.crypto_transform.gold
+[2025-12-10T04:17:14.273+0000] {subprocess.py:93} INFO - [0m04:17:14  Found 1 model, 1 source, 454 macros
+[2025-12-10T04:17:14.275+0000] {subprocess.py:93} INFO - [0m04:17:14
+[2025-12-10T04:17:14.275+0000] {subprocess.py:93} INFO - [0m04:17:14  Nothing to do. Try checking your model configs and model specification args
+[2025-12-10T04:17:17.795+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-10T04:17:17.833+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=crypto_dbt_docker, task_id=dbt_test, execution_date=20251210T041600, start_date=20251210T041710, end_date=20251210T041717
+[2025-12-10T04:17:17.869+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-10T04:17:17.889+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

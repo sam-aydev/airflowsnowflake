@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table streaming_db.public.crypto_metadata (ticker text,sector text,risk_level text)
+  ;
+    -- dbt seed --
+    
+            insert into streaming_db.public.crypto_metadata (ticker, sector, risk_level) values
+            (%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s)
+        
+
+;
+  

@@ -1,0 +1,15 @@
+name: 'crypto_transform'
+version: '1.0.0'
+config-version: 2
+
+profile: 'crypto_transform' # This connects code to your passwords
+
+model-paths: ["models"]
+models:
+  crypto_transform:
+    bronze:
+      materialized: view
+    silver:
+      materialized: table
+    gold:
+      materialized: table

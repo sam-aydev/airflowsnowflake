@@ -1,0 +1,47 @@
+[2025-12-10T04:45:27.198+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T04:44:00+00:00 [queued]>
+[2025-12-10T04:45:27.210+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T04:44:00+00:00 [queued]>
+[2025-12-10T04:45:27.211+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-12-10T04:45:27.232+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): dbt_run> on 2025-12-10 04:44:00+00:00
+[2025-12-10T04:45:27.243+0000] {standard_task_runner.py:57} INFO - Started process 2072 to run task
+[2025-12-10T04:45:27.250+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_dbt_docker', 'dbt_run', 'scheduled__2025-12-10T04:44:00+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/dbt_pipeline.py', '--cfg-path', '/tmp/tmp118_l73w']
+[2025-12-10T04:45:27.255+0000] {standard_task_runner.py:85} INFO - Job 66: Subtask dbt_run
+[2025-12-10T04:45:27.298+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-10T04:45:27.374+0000] {task_command.py:415} INFO - Running <TaskInstance: crypto_dbt_docker.dbt_run scheduled__2025-12-10T04:44:00+00:00 [running]> on host 35423fd881ec
+[2025-12-10T04:45:27.554+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crypto_dbt_docker' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-12-10T04:44:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-10T04:44:00+00:00'
+[2025-12-10T04:45:27.557+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-10T04:45:27.558+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'dbt run --project-dir /opt/***/dbt_project --profiles-dir /opt/***/dbt_profiles']
+[2025-12-10T04:45:27.579+0000] {subprocess.py:86} INFO - Output:
+[2025-12-10T04:45:30.712+0000] {subprocess.py:93} INFO - [0m04:45:30  Running with dbt=1.8.7
+[2025-12-10T04:45:32.366+0000] {subprocess.py:93} INFO - [0m04:45:32  Registered adapter: snowflake=1.8.4
+[2025-12-10T04:45:33.166+0000] {subprocess.py:93} INFO - [0m04:45:33  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2025-12-10T04:45:33.167+0000] {subprocess.py:93} INFO - There are 1 unused configuration paths:
+[2025-12-10T04:45:33.168+0000] {subprocess.py:93} INFO - - models.crypto_transform.gold
+[2025-12-10T04:45:33.387+0000] {subprocess.py:93} INFO - [0m04:45:33  Found 2 models, 1 source, 454 macros
+[2025-12-10T04:45:33.390+0000] {subprocess.py:93} INFO - [0m04:45:33
+[2025-12-10T04:45:37.480+0000] {subprocess.py:93} INFO - [0m04:45:37  Concurrency: 1 threads (target='dev')
+[2025-12-10T04:45:37.480+0000] {subprocess.py:93} INFO - [0m04:45:37
+[2025-12-10T04:45:37.497+0000] {subprocess.py:93} INFO - [0m04:45:37  1 of 2 START sql view model public.bronze_data ................................. [RUN]
+[2025-12-10T04:45:37.424+0000] {subprocess.py:93} INFO - [0m04:45:37  1 of 2 OK created sql view model public.bronze_data ............................ [[32mSUCCESS 1[0m in -0.08s]
+[2025-12-10T04:45:37.432+0000] {subprocess.py:93} INFO - [0m04:45:37  2 of 2 START sql incremental model public.silver_transformations ............... [RUN]
+[2025-12-10T04:45:39.015+0000] {subprocess.py:93} INFO - [0m04:45:39  2 of 2 ERROR creating sql incremental model public.silver_transformations ...... [[31mERROR[0m in 1.58s]
+[2025-12-10T04:45:39.022+0000] {subprocess.py:93} INFO - [0m04:45:39
+[2025-12-10T04:45:39.023+0000] {subprocess.py:93} INFO - [0m04:45:39  Finished running 1 view model, 1 incremental model in 0 hours 0 minutes and 5.63 seconds (5.63s).
+[2025-12-10T04:45:39.086+0000] {subprocess.py:93} INFO - [0m04:45:39
+[2025-12-10T04:45:39.088+0000] {subprocess.py:93} INFO - [0m04:45:39  [31mCompleted with 1 error and 0 warnings:[0m
+[2025-12-10T04:45:39.088+0000] {subprocess.py:93} INFO - [0m04:45:39
+[2025-12-10T04:45:39.090+0000] {subprocess.py:93} INFO - [0m04:45:39    Database Error in model silver_transformations (models/silver/silver_transformations.sql)
+[2025-12-10T04:45:39.090+0000] {subprocess.py:93} INFO -   000606 (57P03): No active warehouse selected in the current session.  Select an active warehouse with the 'use warehouse' command.
+[2025-12-10T04:45:39.090+0000] {subprocess.py:93} INFO - 
+[2025-12-10T04:45:39.090+0000] {subprocess.py:93} INFO -   compiled code at target/run/crypto_transform/models/silver/silver_transformations.sql
+[2025-12-10T04:45:39.090+0000] {subprocess.py:93} INFO - [0m04:45:39
+[2025-12-10T04:45:39.092+0000] {subprocess.py:93} INFO - [0m04:45:39  Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[2025-12-10T04:45:41.909+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-12-10T04:45:41.939+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-12-10T04:45:41.946+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=crypto_dbt_docker, task_id=dbt_run, execution_date=20251210T044400, start_date=20251210T044527, end_date=20251210T044541
+[2025-12-10T04:45:41.974+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 66 for task dbt_run (Bash command failed. The command returned a non-zero exit code 1.; 2072)
+[2025-12-10T04:45:42.360+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-12-10T04:45:42.392+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

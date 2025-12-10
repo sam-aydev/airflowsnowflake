@@ -1,0 +1,29 @@
+
+  create or replace   view streaming_db.public.gold_consumption_view
+  
+   as (
+    
+
+SELECT
+    -- 1. Fact Data (Measures)
+    f.trade_time,
+    f.price,
+    f.quantity,
+    f.total_amount_usd,
+    
+    -- 2. Dimension Data (Context)
+    -- We act as if these columns always belonged to the trade
+    d.sector,
+    d.risk_level,
+    
+    -- 3. Metadata (Optional)
+    f.fact_id,
+    f.buyer_order_id,
+    f.seller_order_id
+
+FROM streaming_db.public.fact_trades f
+-- The Join is already done HERE so users don't have to do it
+LEFT JOIN streaming_db.public.dim_symbol d 
+    ON f.symbol_key = d.symbol_key
+  );
+

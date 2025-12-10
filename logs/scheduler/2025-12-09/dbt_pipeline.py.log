@@ -1,0 +1,75 @@
+[2025-12-09T05:38:09.658+0000] {processor.py:157} INFO - Started process (PID=170) to work on /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:38:09.659+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dbt_pipeline.py for tasks to queue
+[2025-12-09T05:38:09.660+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:38:09.660+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:38:09.689+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_dbt_docker']) retrieved from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:38:09.924+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:38:09.924+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-12-09T05:38:09.942+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:38:09.942+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-12-09T05:38:09.953+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:38:09.952+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-12-09T05:38:09.953+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:38:09.953+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:crypto_dbt_docker' as access control is unset.
+[2025-12-09T05:38:09.953+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:38:09.953+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-12-09T05:38:10.112+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:38:10.112+0000] {dag.py:2937} INFO - Creating ORM DAG for crypto_dbt_docker
+[2025-12-09T05:38:10.125+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:38:10.124+0000] {dag.py:3696} INFO - Setting next_dagrun for crypto_dbt_docker to 2025-12-09T05:37:00+00:00, run_after=2025-12-09T05:38:00+00:00
+[2025-12-09T05:38:10.143+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_pipeline.py took 0.489 seconds
+[2025-12-09T05:38:40.543+0000] {processor.py:157} INFO - Started process (PID=176) to work on /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:38:40.544+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dbt_pipeline.py for tasks to queue
+[2025-12-09T05:38:40.545+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:38:40.545+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:38:40.559+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_dbt_docker']) retrieved from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:38:40.597+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:38:40.596+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-12-09T05:38:40.626+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:38:40.626+0000] {dag.py:3696} INFO - Setting next_dagrun for crypto_dbt_docker to 2025-12-09T05:37:00+00:00, run_after=2025-12-09T05:38:00+00:00
+[2025-12-09T05:38:40.647+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_pipeline.py took 0.108 seconds
+[2025-12-09T05:39:11.450+0000] {processor.py:157} INFO - Started process (PID=181) to work on /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:39:11.452+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dbt_pipeline.py for tasks to queue
+[2025-12-09T05:39:11.453+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:39:11.453+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:39:11.465+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_dbt_docker']) retrieved from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:39:11.494+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:39:11.494+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-12-09T05:39:11.519+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:39:11.519+0000] {dag.py:3696} INFO - Setting next_dagrun for crypto_dbt_docker to 2025-12-09T05:38:00+00:00, run_after=2025-12-09T05:39:00+00:00
+[2025-12-09T05:39:11.539+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_pipeline.py took 0.093 seconds
+[2025-12-09T05:39:42.428+0000] {processor.py:157} INFO - Started process (PID=186) to work on /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:39:42.434+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dbt_pipeline.py for tasks to queue
+[2025-12-09T05:39:42.435+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:39:42.435+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:39:42.448+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_dbt_docker']) retrieved from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:39:42.478+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:39:42.477+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-12-09T05:39:42.504+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:39:42.504+0000] {dag.py:3696} INFO - Setting next_dagrun for crypto_dbt_docker to 2025-12-09T05:38:00+00:00, run_after=2025-12-09T05:39:00+00:00
+[2025-12-09T05:39:42.702+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_pipeline.py took 0.278 seconds
+[2025-12-09T05:40:13.323+0000] {processor.py:157} INFO - Started process (PID=191) to work on /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:40:13.326+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dbt_pipeline.py for tasks to queue
+[2025-12-09T05:40:13.326+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:40:13.326+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:40:13.341+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_dbt_docker']) retrieved from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:40:13.375+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:40:13.374+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-12-09T05:40:13.538+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:40:13.537+0000] {dag.py:3696} INFO - Setting next_dagrun for crypto_dbt_docker to 2025-12-09T05:39:00+00:00, run_after=2025-12-09T05:40:00+00:00
+[2025-12-09T05:40:13.555+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_pipeline.py took 0.237 seconds
+[2025-12-09T05:40:44.227+0000] {processor.py:157} INFO - Started process (PID=196) to work on /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:40:44.229+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dbt_pipeline.py for tasks to queue
+[2025-12-09T05:40:44.231+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:40:44.230+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:40:44.252+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_dbt_docker']) retrieved from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:40:44.304+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:40:44.304+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-12-09T05:40:44.572+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:40:44.572+0000] {dag.py:3696} INFO - Setting next_dagrun for crypto_dbt_docker to 2025-12-09T05:39:00+00:00, run_after=2025-12-09T05:40:00+00:00
+[2025-12-09T05:40:44.597+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_pipeline.py took 0.388 seconds
+[2025-12-09T05:41:15.394+0000] {processor.py:157} INFO - Started process (PID=201) to work on /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:41:15.401+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dbt_pipeline.py for tasks to queue
+[2025-12-09T05:41:15.402+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:41:15.402+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:41:15.415+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_dbt_docker']) retrieved from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:41:15.591+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:41:15.591+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-12-09T05:41:15.632+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:41:15.632+0000] {dag.py:3696} INFO - Setting next_dagrun for crypto_dbt_docker to 2025-12-09T05:40:00+00:00, run_after=2025-12-09T05:41:00+00:00
+[2025-12-09T05:41:15.652+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_pipeline.py took 0.261 seconds
+[2025-12-09T05:41:46.509+0000] {processor.py:157} INFO - Started process (PID=214) to work on /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:41:46.511+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dbt_pipeline.py for tasks to queue
+[2025-12-09T05:41:46.512+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:41:46.511+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:41:46.806+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_dbt_docker']) retrieved from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:41:46.831+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:41:46.830+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-12-09T05:41:46.853+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:41:46.853+0000] {dag.py:3696} INFO - Setting next_dagrun for crypto_dbt_docker to 2025-12-09T05:41:00+00:00, run_after=2025-12-09T05:42:00+00:00
+[2025-12-09T05:41:46.868+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_pipeline.py took 0.369 seconds
+[2025-12-09T05:42:17.634+0000] {processor.py:157} INFO - Started process (PID=223) to work on /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:42:17.636+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dbt_pipeline.py for tasks to queue
+[2025-12-09T05:42:17.637+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:42:17.636+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:42:17.650+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_dbt_docker']) retrieved from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:42:17.681+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:42:17.680+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-12-09T05:42:17.704+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:42:17.704+0000] {dag.py:3696} INFO - Setting next_dagrun for crypto_dbt_docker to 2025-12-09T05:42:00+00:00, run_after=2025-12-09T05:43:00+00:00
+[2025-12-09T05:42:17.724+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_pipeline.py took 0.093 seconds
+[2025-12-09T05:42:48.586+0000] {processor.py:157} INFO - Started process (PID=228) to work on /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:42:48.588+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dbt_pipeline.py for tasks to queue
+[2025-12-09T05:42:48.588+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:42:48.588+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:42:48.604+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_dbt_docker']) retrieved from /opt/airflow/dags/dbt_pipeline.py
+[2025-12-09T05:42:48.638+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:42:48.638+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-12-09T05:42:48.666+0000] {logging_mixin.py:151} INFO - [2025-12-09T05:42:48.666+0000] {dag.py:3696} INFO - Setting next_dagrun for crypto_dbt_docker to 2025-12-09T05:42:00+00:00, run_after=2025-12-09T05:43:00+00:00
+[2025-12-09T05:42:48.686+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_pipeline.py took 0.106 seconds

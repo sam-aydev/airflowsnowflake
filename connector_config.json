@@ -1,0 +1,25 @@
+{
+  "name": "snowflake-connector",
+  "config": {
+    "connector.class": "com.snowflake.kafka.connector.SnowflakeSinkConnector",
+    "tasks.max": "1",
+    "topics": "stock_trades",
+    
+    "snowflake.url.name": "DMJRCZZ-JX62496.snowflakecomputing.com",
+    "snowflake.user.name": "kafka_user",
+    "snowflake.private.key": "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCpNIaGsj9WWZQCm7Ol8TrJLN7Mo4anRoehWaQ24dP9z+qYv53e3fylcRVAVqSvQQK5JKPKra1go27Bo05PNfOPKu1L1erbobe/k3oFVu2wdQFHx84o3Vhp68YMQ9quj362cAXqQZ2g/xZMkUFi05NK7q4ExtV1mtjwTlXLf5uf8QLX7tRYVuM2a64sEAYP2VoeoXT1rtgrsD6UkfeJg3hDpW2XKfY8Cex1eeRMpCO4Ox/OhBydENZyLjihmmKw0Sr/Rr5AU55ykTMY1lMJN7RnlGCYIzrz6naPfTFGYcBcdDRl6k3stogf/rbAYsWbLfoc4veDGGzxonafL0AuFlx/AgMBAAECggEAGmA9uDGA/gzorZ9n2a5I46NC99Nl4h10dwpqNsPtL9uBTl5QVbV09LU0Att+wHL54bJ8ddOs+yt+0GCMjHx0gxTF+NRXz/Tdl9d9ZeevFZqnoHDdCjG23owKS08of52OuxGrWmDwGXCqITVjY+xnQX8DUWtNSw/gUVVkulwh/kRqscBLGSL/rTcRBDEjcsMD/EMweeA311aaVNlRT77GshHIsKsM4Dva+6slABMMg6urJql9M9LYReTFpdWRZDsJc4IorMs6KZJ/ab5qnlBBQPlE6OhCq79amNNSn8jMJBZsT4puENsVlhh7GiFmhcewMz3ZaH2x+0ybodvpQiD8AQKBgQDROdvlXNHKy7R4nxB84EiBa3VepRd+Z1sHaj6vRctyiUxhfjB4IGl4hr0TjyNzc2xjcdxm0LXADQSftQXlEuDCloz2ZDBxLY33Y7/mzqvEiR10D1+pNgHPm5t+iwzZI4x6maqenuvZCiNqL2o2/fWwWsaZyUB5/KkXMhVtXtgNQQKBgQDPCD+ES/S8mKed6fZSwr/JrshVvKCHfDPlSYHWXvsEtFJc01FcJW50i8CbiPp1kC39Die2quBMGkLEj66SOGPvwz9jprbzA1ebOacNfQfWlDo8EPQxnchrAfd2g1CYULJkDDru+JAvjpaCBrv/sx2tHizjex5z1Yki7DXPprE5vwKBgEvOO9b5b2WbstK1RyMHnB2QEqFtDXsV9YxVOUsF7bWc+1ijgOo1TCGIJ/9rMDwHSPEq8uEpo4Bm9xLqYq1hzp+SLpajLE4FZFeLA5+bp+54g3xmiZFkaPmQdqE9vjT6RU6yWHhKOkeT/creTQyJrTftW+GiYkMQgS9PTSYoY/1BAoGBAMInJgnXgYhsUKTTCGHMqTdmZhGhd5oXbEOWj+CN6jIbOTI8KoyTveYmOVajOt6Ne9NZNv0jen1kE0FqzXfq0i3DmOrHKcL0W3ACvRr1KiidkY9LBvaQ1ackjQHjW+27n9AbeBkrmWw/9/2wexXsz+PN7KLYj1Jp6tWJV12JIaLZAoGBAJyGuVhc9q5ce3aValW1HiaCQ+yGWsdC7/ppc5GRiITuojZ+FPj2ZyhRl1/H0LQHaHwAbiapfaOZJiAwuJpr/kJ88bAnFRZtDsiGLOpofygtHBySliJR/Q+fwXPYeLy7vXmJdxxrN5iJnIvfoBD6iWBOmcBm2eil0e8xB3UIhKTd",
+    "snowflake.database.name": "streaming_db",
+    "snowflake.schema.name": "public",
+    "snowflake.role.name": "kafka_role",
+    "snowflake.topic2table.map": "stock_trades:stock_trades_raw",
+    
+    "buffer.count.records": "1",      
+    "buffer.flush.time": "1",         
+    "buffer.size.bytes": "100",
+    
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "snowflake.ingestion.method": "SNOWPIPE_STREAMING"
+  }
+}
